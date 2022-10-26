@@ -1,0 +1,38 @@
+#banner
+{
+    background-color: rgb(255, 213, 162);
+    text-align: center;
+    padding: 20px;
+}
+#menu1, #menu2, #menu3, #menu4
+{
+    background-color: rgb(191, 112, 17);
+    text-align: center;
+    font-size: 150%;
+    color: white;
+    width: 25%;
+    float: left;
+}
+#content
+{
+    height: 400px;
+}
+#footer
+{
+    background-color: rgb(191, 112, 17);
+    color: white;
+    text-align: right;
+    font-size: 150%;
+}
+a
+{
+    color: white;
+}
+button
+{
+    background-color: brown;
+    border: brown solid 2px;
+    color: white;
+    font-weight: 600;
+    padding: 10px;
+}

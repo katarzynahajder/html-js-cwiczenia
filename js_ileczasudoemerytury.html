@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+            <form>
+                Podaj swoje imie: <input type="text" id="input1" value="Imie" style="font-size: 15px;"><br>
+                Podaj swoje nazwisko: <input type="text" id="input2" value="Nazwisko" style="font-size: 15px; margin-top: 15px;"><br>
+                Podaj swój rok urodzenia: <input type="text" id="input3" value="0" style="font-size: 15px;margin-right: 60px; margin-top: 15px; margin-bottom: 15px;"><br>
+                <div id="pole_wynik">
+                    Lata do emerytury:
+                    <p id="wynik"><br></p>
+                </div>
+                <button onclick="return obliczdm();" style="font-size: 15px;">
+                    Oblicz dla mężczyzny
+                </button>
+                <button onclick="return obliczdk();" style="font-size: 15px;">
+                    Oblicz dla kobiety
+                </button>
+            </form>
+        <script>
+            function obliczdm()
+            {
+                var x=Number(document.getElementById("input3").value);
+                var y=2021-x;
+                document.getElementById("wynik").innerHTML=65-y;
+                return false;
+            }
+            function obliczdk()
+            {
+                var x=Number(document.getElementById("input3").value);
+                var y=2021-x;
+                document.getElementById("wynik").innerHTML=60-y;
+                return false;
+            }
+        </script>
+    </body>
+</html>

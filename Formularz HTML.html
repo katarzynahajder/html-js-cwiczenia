@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+body{
+  padding: 10px;
+}
+
+textarea{
+  font-size: 10px;
+}
+</style>
+</head>
+<body>
+<form>
+<input type="tekst" name="firstname"> Podaj swoje imię<br><br>
+<input type="tekst" name="lastname"> Podaj swoje nazwisko<br><br>
+Podaj swoją płeć:<br><br>
+<input type="radio" name="plec">Kobieta<input type="radio" name="plec">Mężczyzna<br><br>
+Ile masz lat?<br><br>
+<input type="radio" name="wiek">mniej niż 15<br>
+<input type="radio" name="wiek">15-19<br>
+<input type="radio" name="wiek">20-29<br>
+<input type="radio" name="wiek">30-39<br>
+<input type="radio" name="wiek">40-60<br>
+<input type="radio" name="wiek">więcej niż 60<br><br>
+Jaką lubisz muzykę (możesz zaznaczyć więcej możliwości)?<br><br>
+<input type="checkbox" name="muzyka">Rock<br>
+<input type="checkbox" name="muzyka">Heavy Metal<br>
+<input type="checkbox" name="muzyka">Pop<br>
+<input type="checkbox" name="muzyka">Techno<br>
+<input type="checkbox" name="muzyka">Muzyka poważna<br>
+<input type="checkbox" name="muzyka">Inna (podaj jaka): <input type="tekst" name="muzyka"><br><br>
+Jakiej przeglądarki internetowej używasz?<br><br>
+Jakie znasz systemy operacyjne (możesz wybrać kilka opcji trzymając klawisz Ctrl)?<br><br>
+Podaj swój komentarz:<br><br>
+<textarea rows="10" cols="50" name="komentarz">
+Proszę, wpisz tutaj jakiś komentarz...
+</textarea><br><br>
+<input type="submit" onclick="alert('Wysłano!')" value="Wyślij formularz">
+<input type="reset" value="Wyczyść dane">
+</form>
+</body>
+</html>

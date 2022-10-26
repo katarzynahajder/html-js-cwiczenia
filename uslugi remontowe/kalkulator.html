@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="remont.css" rel="stylesheet" type="text/css">
+    <title>Wyremontuj mieszkanie</title>
+</head>
+<body>
+    <div id="banner">
+        <img src="logo.png">
+    </div>
+    <div id="menu1">
+        <a href="index.html">O NAS</a>
+    </div>
+    <div id="menu2">
+        <a href="kontakt.html">KONTAKT</a>
+    </div>
+    <div id="menu3">
+        <a href="kalkulator.html">KALKULATOR</a>
+    </div>
+    <div id="menu4">
+        <a href="http://www.jakremontowac.pl/" target="_blank">POLECANE STRONY</a>
+    </div>
+    <div id="content">
+        <h1>Malowanie pokoju: 8zł za m2</h1>
+        <p>Wymiary pokoju w metrach: <input type="number" id="1" value=0><input type="number" id="2" value=0></p>
+        <button onclick="return oblicz();">
+            OBLICZ KOSZT
+        </button>
+        <p id="wynikp"></p>
+        <p id="wynikk"></p>
+    </div>
+    <div id="footer">
+        <p>
+            Autor strony : 00000000000000
+        </p>
+    </div>
+    <script>
+        function oblicz()
+        {
+            var a=Number(document.getElementById("1").value);
+            var b=Number(document.getElementById("2").value);
+            var x=a*2*2.7;
+            var y=b*2*2.7;
+            document.getElementById("wynikp").innerHTML="Powierzchnia calkowita ścian: "+(x+y);
+            document.getElementById("wynikk").innerHTML="Koszt malowania: "+((x+y)*8)+" zł";
+            return false;
+        }
+    </script>
+</body>
+</html>

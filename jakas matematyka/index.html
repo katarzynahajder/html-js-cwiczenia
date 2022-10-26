@@ -1,0 +1,61 @@
+<!DOCTYPEE html>
+<html lang="pl">
+<head>
+<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8"
+</head>
+<body>
+	<div id="banner">
+	<a href="index.html"><img src="banner.jpg" style="width: 100%;"></a>
+	</div>
+	<div id="l_column">
+		<ul>
+		<li>MENU</li>
+		<li onclick="opis();">Opis</li>
+		<li onclick="liczba();">Jaka to liczba?</li>
+		<li onclick="zakres();">Podaj liczby z zakresu</li>
+		</ul>
+	</div>
+	<div id="r_column">
+		Zawartość podstron:
+        <p id="zawartosc"></p>
+	</div>
+    <script>
+        function opis()
+        {
+            document.getElementById("zawartosc").innerHTML="Katarzyna Hajder";
+        }
+        function liczba()
+        {
+            var x=prompt("Podaj liczbę całkowitą: ", 0);
+            if(x>0)document.getElementById("zawartosc").innerHTML="Liczba "+x+" jest liczbą dodatnią!";
+            else if(x<0)document.getElementById("zawartosc").innerHTML="Liczba "+x+" jest liczbą ujemną!";
+            else document.getElementById("zawartosc").innerHTML="Liczba "+x+" jest liczbą zerową!";
+        }
+        function zakres()
+        {
+            var xp=prompt("Podaj liczbę początkową: ", 0);
+            var xk=prompt("Podaj liczbę końcową: ", 0);
+            var ciag=" ";
+            if(xp<xk)
+            {
+                for(xp; xp<=xk; xp++)
+                {
+                    ciag+=xp;
+				    ciag+=" ";
+                }
+            }
+            else if(xp>xk)
+            {
+                for(xp; xp>=xk; xp--)
+                {
+                    ciag+=xp;
+				    ciag+=" ";
+                }
+            }
+            else ciag="Te liczby są równe!";
+            document.getElementById("zawartosc").innerHTML=ciag;
+        }
+    </script>
+</body>
+</html>

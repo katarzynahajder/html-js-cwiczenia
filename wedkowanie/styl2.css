@@ -1,0 +1,34 @@
+body{
+    font-family: Garamond;
+}
+#banner{
+    background-color: #3CB371;
+    color: white;
+    padding: 10px;
+    font-size: 130%;
+    text-align: center;
+}
+#left{
+    background-color: #FAEBD7;
+    width: 55%;
+    height: 450px;
+    float: left;
+}
+#right{
+    background-color: #FAEBD7;
+    width: 45%;
+    height: 450px;
+    float: left;
+}
+#footer{
+    background-color: #3CB371;
+    color: white;
+    padding-bottom: 10px;
+    font-size: 130%;
+    text-align: center;
+}
+img{
+    padding: 3px;
+    margin: 15px;
+    border: 2px dashed #3CB371;
+}

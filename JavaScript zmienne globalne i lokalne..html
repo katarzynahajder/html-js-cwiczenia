@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<title></title>
+</head>
+<body>
+	Podaj prędkość w km/h: <input id="input1" type="text" value="1">
+	<button type="button" onclick="obliczenia();">Przelicz na m/s</button>
+	<div id="div1">
+	</div>
+	<script>
+		var input1=document.getElementById("input1");
+		var div1=document.getElementById("div1");
+		function przelicz(kmh)
+		{
+			return kmh*1000/(60*60);
+		}
+		function obliczenia()
+		{
+			var kmh=Number(input1.value);
+			var ms=przelicz(kmh);
+			div1.innerHTML="Prędkość w m/s wynosi: "+ms;
+		}
+	</script>
+</body>
+</html>

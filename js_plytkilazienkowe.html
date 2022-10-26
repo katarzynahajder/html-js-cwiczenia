@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        Podaj łączną powierzchnię ścian bocznych (w m2): <input type="text" id="input1" value="0" style="font-size: 15px;"><br>
+        Podaj szerokość wybranej płytki (w cm): <input type="text" id="input2" value="0" style="margin-top: 15px; font-size: 15px;"><br>
+        Podaj wysokość wybranej płytki (w cm): <input type="text" id="input3" value="0" style="margin-top: 15px; font-size: 15px;">
+        <div id="pole_wynik">
+            <p id="wynik"style="font-size: 25px;"><br></p>
+        </div>
+        <button onclick="return obliczenie();" style="font-size: 15px;">
+            Oblicz ilość potrzebnych płytek
+        </button>
+        <script>
+            function obliczenie()
+            {
+                var x1=Number(document.getElementById("input1").value);
+                var x=x1*10000;
+                var y=Number(document.getElementById("input2").value);
+                var z=Number(document.getElementById("input3").value);
+                var pole_plytki=y*z;
+                var ilosc=x/pole_plytki;
+                for(var i=0;;i++)
+                    {
+                        if(i==ilosc)
+                            {
+                                document.getElementById("wynik").innerHTML=ilosc;
+                                break;
+                            }
+                        else if(i>ilosc&&i<ilosc+1)
+                            {
+                                ilosc=i;
+                                document.getElementById("wynik").innerHTML=ilosc;
+                                break;
+                            }
+                        else continue;
+                    }
+                return false;
+            }
+        </script>
+    </body>
+</html>

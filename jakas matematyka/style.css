@@ -1,0 +1,21 @@
+body{
+	font-family: Arial;
+	font-size: 18px;
+}
+#banner{
+	width: 100%;
+    border: 2px solid black;
+}
+#l_column{
+	width: 40%;
+	font-family: Arial;
+	float: left;
+    padding-top: 15px;
+}
+#r_column{
+	width: 60%;
+    padding-top: 25px;
+}
+li{
+	list-style-type: none;
+}

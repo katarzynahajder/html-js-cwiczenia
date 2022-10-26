@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div id="content" style="width: 800px; background-color: aliceblue; padding: 30px; margin: auto; font-size: 20px;">
+            Podaj pierwszą liczbę: <input type="text" id="input1" value="0" style="margin-right: 50px; font-size: 15px;">
+            Podaj drugą liczbę: <input type="text" id="input2" value="0" style="font-size: 15px;"><br>
+            <div id="pole_wynik">
+                <p id="wynik"style="text-align: center; font-size: 50px; background-color: #ebebeb;"><br></p>
+            </div>
+            <button onclick="return dodawanie();" style="font-size: 30px; width: 32.9%;">
+                +
+            </button>
+            <button onclick="return odejmowanie();"  style="font-size: 30px; width: 32.9%;">
+                -
+            </button>
+            <button onclick="return mnozenie();"  style="font-size: 30px; width: 32.9%;">
+                *
+            </button><br>
+            <button onclick="return dzielenie();"  style="font-size: 30px; width: 100%; margin-top: 5px;">
+                /
+            </button>
+            <script>
+                function dodawanie()
+                {
+                    var x=Number(document.getElementById("input1").value);
+                    var y=Number(document.getElementById("input2").value);
+                    document.getElementById("wynik").innerHTML=x+y;
+                    return false;
+                }
+                function odejmowanie()
+                {
+                    var x=Number(document.getElementById("input1").value);
+                    var y=Number(document.getElementById("input2").value);
+                    document.getElementById("wynik").innerHTML=x-y;
+                    if(y>x)
+                    {
+                        alert("POWINIENEŚ ODEJMOWAĆ MNIEJSZĄ OD WIĘKSZEJ!!!");
+                        document.getElementById("wynik").innerHTML=0;
+                    }
+                    return false;
+                }
+                function mnozenie()
+                {
+                    var x=Number(document.getElementById("input1").value);
+                    var y=Number(document.getElementById("input2").value);
+                    document.getElementById("wynik").innerHTML=x*y;
+                    if(x==0||y==0)
+                    {
+                        alert("NIE MNÓŻ PRZEZ 0!!!");
+                        document.getElementById("wynik").innerHTML=0;
+                    }
+                    return false;
+                }
+                function dzielenie()
+                {   
+                    var x=Number(document.getElementById("input1").value);
+                    var y=Number(document.getElementById("input2").value);
+                    document.getElementById("wynik").innerHTML=x/y;
+                    if(x==0||y==0)
+                    {
+                        alert("NIE DZIEL PRZEZ 0!!!");
+                        document.getElementById("wynik").innerHTML=0;
+                    }
+                    return false;
+                }
+            </script>
+        </div>
+    </body>
+</html>
